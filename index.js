@@ -5,19 +5,13 @@ const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-var whiteList = [
-  "https://637fd5cc48c6555da1f79120--benevolent-pika-0b6184.netlify.app/",
-];
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
-app.use(cors(corsOptions));
+
+//app.use(cors());
+//app.use(function(req, res, next) {
+// res.header("Access-Control-Allow-Origin", "*");
+//  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//  next();
+//});
 const mongoModelItems = require("./mongoModelItems");
 const mongoModelAccounts = require("./mongoModelAccounts");
 app.use(express.json());

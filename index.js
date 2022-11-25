@@ -9,9 +9,7 @@ const app = express();
 const cors = require("cors");
 
 var corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionsSuccessStatus: 200,
+  origin: true,
 };
 app.use(cors(corsOptions));
 const mongoModelItems = require("./mongoModelItems");

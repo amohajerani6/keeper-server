@@ -8,10 +8,7 @@ const app = express();
 
 const cors = require("cors");
 
-var corsOptions = {
-  origin: true,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 const mongoModelItems = require("./mongoModelItems");
 const mongoModelAccounts = require("./mongoModelAccounts");
 app.use(express.json());

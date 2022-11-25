@@ -6,8 +6,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
-const cors = require("cors");
-
 app.use(cors());
 const mongoModelItems = require("./mongoModelItems");
 const mongoModelAccounts = require("./mongoModelAccounts");
